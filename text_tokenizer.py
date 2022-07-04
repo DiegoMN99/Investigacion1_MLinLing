@@ -17,7 +17,7 @@ def corpus_cleaner(corpus_original):
     mi_texto = [re.sub('  ', '', x, flags = re.M) for x in mi_texto] #elimina espacios dobles
     # mi_texto = [x.translate(str.maketrans('', '', string.punctuation)) for x in mi_texto] #Correr si se desea eliminar puntos finales
     mi_texto = ' '.join(mi_texto)
-    texto_formateado = open(file.name[:len(file.name) - 4] + '_lematizado.txt','w+')
+    texto_formateado = open(file.name[:len(file.name) - 4] + '_normalizado.txt','w+')
     texto_formateado.write(str(mi_texto))
     texto_formateado.close
     print("Archivo formatteado!🥳 Por favor checkear la carpeta")
